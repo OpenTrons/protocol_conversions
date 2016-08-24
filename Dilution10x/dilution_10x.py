@@ -117,4 +117,12 @@ for r in range(1,12):
 	protocol.mix(to_row, volume=100, repetitions=3)
 
 
+### QUESTIONS ###
+# Currently, in the JSON we assign a tiprack to a pipette, 
+# Something to think about here. Or is it automatic? Need to dig more
+# Reuse tip aka dont auto drop tip for certain actions, where and how?
+# Also, do we need to specify Muli vs Single channel  when adding instruments? 
+# If a user can write, and define in terms of columns, rows, or groups of wells 
+# on a plate - is that transfer_group ? - can we just say column1 or rowA, maybe define a range of wells? 
+
 
