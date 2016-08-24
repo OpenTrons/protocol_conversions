@@ -37,10 +37,15 @@ end_config = {
 	'blowout': True
 }
 
-for row in 'ABCDEFGH':
-	from_well = 'Micro_Tube_Rack:A1'
-	to_well = 'PCR_plate:{row}1'.format(row=row)
-	protocol.transfer(from_well, to_well, tool='a', ul=23, start_config, end_config)
+protocol.pickup_tip()
+
+with protocol.new_tip() as tip:
+	for row in 'ABCDEFGH':
+		from_well = 'Micro_Tube_Rack:A1'
+		to_well = 'PCR_plate:{row}1'.format(row=row)
+		tip.transfer(from_well, to_well, tool='a', ul=23, start_config, end_config)
+
+protocol.droptip()
 
 start_config = {
 	'liquid-tracking': True,
@@ -59,7 +64,10 @@ end_config = {
 	'blowout': True
 }
 
-for row in 'ABCDEFGH':
-	from_well = 'Micro_Tube_Rack:B1'
-	to_well = 'PCR_plate:{row}1'.format(row=row)
-	protocol.transfer(from_well, to_well, tool='b', ul=1, start_config, end_config)
+with protocol.new_tip() as tip:
+	for row in 'ABCDEFGH':
+		from_well = 'Micro_Tube_Rack:B1'
+		to_well = 'PCR_plate:{row}1'.format(row=row)
+		protocol.transfer(from_well, to_well, tool='b', ul=1, start_config, end_config)
+
+		
