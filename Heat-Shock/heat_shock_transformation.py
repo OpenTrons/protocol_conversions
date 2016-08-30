@@ -14,8 +14,6 @@ protocol.set_info(
     created="Mon Aug 29 10:10:00 2016"
 }
 
-
-
 # Pipette(channels, min_vol, max_vol)
 # The Pipette object represents a given pipette used in a protocol.
 # channels = how many tips it can hold (1 or 8)
@@ -31,7 +29,6 @@ p10 = Pipette(channels=1, min_vol=0.5, max_vol=10)
 p200 = Pipette(channels=1, min_vol=20, max_vol=200)
 # p200 = Pipette(channels=8, min_vol=50, max_vol=300)
 # Q: Can we reference preset min and max vols list somewhere in docs?
-
 
 # protocol.add_instrument(axis, instrument)
 # After we create our Pipette objects 
@@ -151,9 +148,10 @@ with protocol.activate(p200):
     protocol.transfer(cold_deck['A1'], heat_deck['A1'], 200)
 
 # Example user defines config defaults based on discussion
-viscous = Config(start={'touchtip'=false, 'delay'= 10}, end={'blowout'=true})
-protocol.activate(p200,viscous.start, viscous.end)
+viscous = Config(start={'touchtip':false, 'delay': 10}, end={'blowout':true})
+protocol.activate(p200,viscous)
 protocol.transfer(cold_deck['A1'], heat_deck['A1'], 200)
+
 protocol.transfer(cold_deck['A2'], heat_deck['A1'], 200, start_config={'delay':1200}) #overwrite visous.start default delay?
 protocol.deactivate(p200)
 
