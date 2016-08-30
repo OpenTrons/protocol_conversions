@@ -14,14 +14,24 @@ protocol.set_info(
     created="Mon Aug 29 10:10:00 2016"
 }
 
+
+
 # Pipette(channels, min_vol, max_vol)
 # The Pipette object represents a given pipette used in a protocol.
 # channels = how many tips it can hold (1 or 8)
 # min_vol = the smallest volume this pipette can handle
 # max_vol = the largest volume this pipette can handle
-p10 = Pipette(channels=1, min_vol=1, max_vol=10) 
-p200 = Pipette(channels=1, min_vol=10, max_vol=200)
+
+# Pipette Object should also have default increments based on the instrument,
+# Need to discuss in meeting: 
+# Do we guarantee volumes that the pipette does not give access to when used manually?
+# min and max vols should have default values in pipette object with option to overwrite
+
+p10 = Pipette(channels=1, min_vol=0.5, max_vol=10) 
+p200 = Pipette(channels=1, min_vol=20, max_vol=200)
+# p200 = Pipette(channels=8, min_vol=50, max_vol=300)
 # Q: Can we reference preset min and max vols list somewhere in docs?
+
 
 # protocol.add_instrument(axis, instrument)
 # After we create our Pipette objects 
@@ -45,8 +55,8 @@ tube_rack = Container(tuberack.2)
 trash = Container(point.trash)
 # note- heat and cool deck are modules but the aluminum tube rack and pcr plate 
 # are assigned just as any other rack or plate. 
-cold_deck = Container(tuberack.2)
-heat_deck = Container(tuberack.2)
+cold_deck = Container(tuberack.2ml.4.6) # scientist suggestion: we need to define tube vol but accomodate various layouts
+heat_deck = Container(tuberack.2ml.10.10) # 2ml tubrack 10x10
 
 # protocol.add_container(slot, container)
 # Adds a container to be used in the protocol, 
@@ -103,9 +113,14 @@ protocol.deactivate(p10)
 # using a python with statement and avoid the deactivate() method
 
 with protocol.activate(p200):
+    # suggestion - can this be a library like our supported containers
+    # so that a user can access defaults for different commands/liquid types
+    # start.viscous, end.water etc?
+    # Can a user define thier own defaults at the beginning of the protocol much like
+    # tools and containers start_config = hivebio.viscous
     s_config = {
         'new_tip' : false, 
-        'touchtip' : false,
+        'touchtip' : true,
         'tip-offset' : 0
     }
     e_config = {
@@ -120,7 +135,7 @@ with protocol.activate(p200):
     # OR
     # should this be separated as an optional argument? 
     # protocol.transfer(start,end,ul,start_config, end_config, delay)?
-    protocol.transfer(start=cold_deck['A1'], end=heat_deck['A1'], ul=27, start_config=s_config, end_config=e_config)
+    protocol.transfer(start=cold_deck['A1'], end=heat_deck['A1'], ul=27,  start_config={'touchtip':true, 'delay':12})
     # the example below uses delay as a separate optional argument after the first transfer in group
     # this will create issues (are we delaying in the start config or end config) 
     # protocol.transfer(start=heat_deck['A1'], end=cold_deck['A1'], ul=27, start_config=s_config, end_config=e_config, delay=300)   
@@ -131,9 +146,16 @@ with protocol.activate(p200):
     s_config.new_tip = true
     e_config.delay = 0
     protocol.transfer(start=cold_deck['A1'], end=heat_deck['A1'], ul=200, start_config=s_config, end_config=e_config)
+    
+    # default three arugments we shouldnt have to say start= end= and ul=
+    protocol.transfer(cold_deck['A1'], heat_deck['A1'], 200)
 
-
-
+# Example user defines config defaults based on discussion
+viscous = Config(start={'touchtip'=false, 'delay'= 10}, end={'blowout'=true})
+protocol.activate(p200,viscous.start, viscous.end)
+protocol.transfer(cold_deck['A1'], heat_deck['A1'], 200)
+protocol.transfer(cold_deck['A2'], heat_deck['A1'], 200, start_config={'delay':1200}) #overwrite visous.start default delay?
+protocol.deactivate(p200)
 
 
 
