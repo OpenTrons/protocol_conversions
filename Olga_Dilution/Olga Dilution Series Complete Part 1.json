@@ -1,0 +1,2679 @@
+{
+    "deck" : {
+        "p1000-rack" : {
+            "labware" : "tiprack-1000ul",
+            "slot" : "A1"
+        },
+        "p1000-rack-2" : {
+            "labware" : "tiprack-1000ul",
+            "slot" : "A2"
+        },
+        "p200-rack" : {
+            "labware" : "tiprack-200ul",
+            "slot" : "B1"
+        },
+        "p200-rack2" : {
+            "labware" : "tiprack-200ul",
+            "slot" : "A3"
+        },
+        "trash" : {
+            "labware" : "trough-12row",
+            "slot" : "B2"
+        },
+        "Tube Rack" : {
+            "labware" : "tube-rack-2ml",
+            "slot" : "C1"
+        },
+        "Plate 1" : {
+            "labware" : "96-PCR-flat",
+            "slot" : "C2"
+        },
+        "Trough" : {
+            "labware" : "trough-12row",
+            "slot" : "C3"
+        },
+        "Plate 2" : {
+            "labware" : "96-PCR-flat",
+            "slot" : "D1"
+        },
+        "Plate 3" : {
+            "labware" : "96-PCR-flat",
+            "slot" : "D2"
+        },
+        "Plate 4" : {
+            "labware" : "96-PCR-flat",
+            "slot" : "D3"
+        },
+        "Plate 5" : {
+            "labware" : "96-PCR-flat",
+            "slot" : "E1"
+        },
+        "Plate 6" : {
+            "labware" : "96-PCR-flat",
+            "slot" : "E2"
+        },
+        "Plate 7" : {
+            "labware" : "96-PCR-flat",
+            "slot" : "E3"
+        }
+    },
+
+    "head" : {
+        "p200" : {
+        "tool" : "pipette",
+        "tip-racks" : [
+            {
+                "container" : "p200-rack"
+            },
+            {
+                "container" : "p200-rack2"
+            }
+        ],
+            "trash-container": {
+                "container": "trash"
+            },
+            "multi-channel": true,
+            "axis": "a",
+            "volume": 200,
+            "down-plunger-speed": 300,
+            "up-plunger-speed": 500,
+            "tip-plunge": 6,
+            "extra-pull-volume": 0,
+            "extra-pull-delay": 200,
+            "distribute-percentage": 0.1,
+             "points": [
+                {
+                    "f1": 1,
+                    "f2": 1
+                },
+                {
+                    "f1": 5,
+                    "f2": 5
+                },
+                {
+                    "f1": 7,
+                    "f2": 7
+                },
+                {
+                    "f1": 10,
+                    "f2": 10
+                }
+            ]
+            
+        },
+        "p1000" : {
+        "tool" : "pipette",
+        "tip-racks" : [
+            {
+                "container" : "p1000-rack"
+            },
+            {
+                "container" : "p1000-rack-2"
+            }
+        ],
+            "trash-container": {
+                "container": "trash"
+            },
+            "multi-channel": false,
+            "axis": "b",
+            "volume": 1000,
+            "down-plunger-speed": 300,
+            "up-plunger-speed": 500,
+            "tip-plunge": 6,
+            "extra-pull-volume": 0,
+            "extra-pull-delay": 200,
+            "distribute-percentage": 0.1,
+             "points": [
+                {
+                    "f1": 1,
+                    "f2": 1
+                },
+                {
+                    "f1": 5,
+                    "f2": 5
+                },
+                {
+                    "f1": 7,
+                    "f2": 7
+                },
+                {
+                    "f1": 10,
+                    "f2": 10
+                }
+            ]
+            
+        }
+    },
+	
+	"ingredients" : {
+
+	},
+
+	"instructions" : [
+		{
+			"tool" : "p1000",
+			"groups" : [
+				{
+					"transfer" : [
+    					{
+    						"from" : {
+    							"container": "Tube Rack",
+                                "location": "A1",
+                                "touch-tip": false
+    						},
+    						"to": {
+                            	"container" : "Plate 1",
+    							"location" : "A1",
+    							"tip-offset" : 0,
+    							"touch-tip" : false
+                            },
+                            	"volume" : 600
+						},
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "A1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "A2",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+					]
+				},
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "B1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "A3",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        },
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "B1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "A4",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "C1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "A5",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        },
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "C1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "A6",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "D1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "A7",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        },
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "D1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "A8",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "A2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "A9",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        },
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "A2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "A10",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "B2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "A11",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        },
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "B2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "A12",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "C2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        },
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "C2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E2",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "D2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E3",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        },
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "D2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E4",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "A3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E5",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        },
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "A3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E6",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "B3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E7",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        },
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "B3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E8",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "C3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E9",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        },
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "C3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E10",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "D3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E11",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        },
+                        {
+                            "from" : {
+                                "container": "Tube Rack",
+                                "location": "D3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "E12",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 600
+                        }
+                    ]
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B1", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C1", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D1", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                }, 
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B2", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C2", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D2", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B3", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C3", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D3", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B4", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C4", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D4", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B5", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C5", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D5", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B6", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C6", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D6", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B7", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C7", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D7", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B8", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C8", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D8", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B9", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C9", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D9", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B10", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C10", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D10", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B11", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C11", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D11", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "B12", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "C12", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "D12", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F1", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G1", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H1", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                }, 
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F2", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G2", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H2", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F3", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G3", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H3", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F4", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G4", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H4", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F5", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G5", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H5", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F6", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G6", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H6", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F7", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G7", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H7", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F8", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G8", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H8", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F9", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G9", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H9", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F10", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G10", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H10", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F11", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G11", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H11", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Trough", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Plate 1", 
+                                "location": "F12", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "G12", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }, 
+                            {
+                                "container": "Plate 1", 
+                                "location": "H12", 
+                                "volume": 300, 
+                                "touch-tip": false
+                            }
+                        ], 
+                        "blowout": false
+                    }
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B2",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C2",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D2",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B3",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C3",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D3",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A4",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B4",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B4",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C4",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C4",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D4",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D4",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A5",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B5",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B5",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C5",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C5",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D5",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D5",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A6",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B6",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B6",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C6",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C6",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D6",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D6",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A7",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B7",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B7",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C7",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C7",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D7",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D7",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A8",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B8",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B8",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C8",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C8",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D8",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D8",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A9",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B9",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B9",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C9",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C9",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D9",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D9",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A10",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B10",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B10",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C10",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C10",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D10",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D10",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A11",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B11",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B11",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C11",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C11",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D11",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D11",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "A12",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "B12",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "B12",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "C12",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "C12",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "D12",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "D12",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H1",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F2",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G2",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H2",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H2",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F3",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G3",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H3",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H3",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E4",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F4",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F4",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G4",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G4",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H4",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H4",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E5",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F5",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F5",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G5",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G5",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H5",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H5",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E6",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F6",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F6",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G6",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G6",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H6",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H6",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E7",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F7",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F7",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G7",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G7",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H7",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H7",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E8",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F8",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G8",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G8",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H8",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H8",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E9",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F9",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F9",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G9",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G9",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H9",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H9",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E10",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F10",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F10",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G10",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G10",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H10",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H10",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E11",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F11",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F11",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G11",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G11",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H11",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H11",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                },
+                {
+                    "transfer" : [
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "E12",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "F12",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "F12",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "G12",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "G12",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "Plate 1",
+                                "location" : "H12",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        },
+                        {
+                            "from" : {
+                                "container": "Plate 1",
+                                "location": "H12",
+                                "touch-tip": false
+                            },
+                            "to": {
+                                "container" : "trash",
+                                "location" : "A1",
+                                "tip-offset" : 0,
+                                "touch-tip" : false
+                            },
+                                "volume" : 300
+                        }
+                    ]
+                }
+			]
+		}
+	]
+}

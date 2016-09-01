@@ -148,7 +148,7 @@ with protocol.activate(p200):
     protocol.transfer(cold_deck['A1'], heat_deck['A1'], 200)
 
 # Example user defines config defaults based on discussion
-viscous = Config(start={'touchtip':false, 'delay': 10}, end={'blowout':true})
+viscous = Config(start={'tip_offset':0, 'delay': 0}, end={'blowout':true})
 protocol.activate(p200,viscous)
 protocol.transfer(cold_deck['A1'], heat_deck['A1'], 200)
 

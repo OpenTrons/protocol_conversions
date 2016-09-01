@@ -1,0 +1,1417 @@
+{
+    "info": {
+        "name": "Bead Barcoding Protocol", 
+        "description": "Beads + oligos", 
+        "create-date": "Feb 26, 2016", 
+        "version": "1.0", 
+        "run-notes": "none"
+    }, 
+    "deck": {
+         
+        "Beads_home": {
+            "labware": "96-deep-well"
+        }, 
+        "Beads_tips": {
+            "labware": "tiprack-200ul"
+        }, 
+        "Oligo_tips_1": {
+            "labware": "tiprack-200ul"
+        }, 
+        "Oligo_tips_2": {
+            "labware": "tiprack-200ul"
+        }, 
+        "Oligo_tips_3": {
+            "labware": "tiprack-200ul"
+        }, 
+        "Oligo_tips_4": {
+            "labware": "tiprack-200ul"
+        }, 
+        "Reaction_1": {
+            "labware": "96-PCR-tall"
+        }, 
+        "Reaction_2": {
+            "labware": "96-PCR-tall"
+        }, 
+        "Reaction_3": {
+            "labware": "96-PCR-tall"
+        }, 
+        "Reaction_4": {
+            "labware": "96-PCR-tall"
+        }, 
+        "Barcode_1": {
+            "labware": "96-PCR-tall"
+        }, 
+        "Barcode_2": {
+            "labware": "96-PCR-tall"
+        },
+        "Barcode_3": {
+            "labware": "96-PCR-tall"
+        }, 
+        "Barcode_4": {
+            "labware": "96-PCR-tall"
+        },
+        "trash" : {
+            "labware" : "point"
+        }
+    }, 
+    "head": {
+        "p200": {
+            "tip-racks": [
+                {
+                    "container": "Beads_tips"
+                }, 
+                {
+                    "container": "Oligo_tips_1"
+                }, 
+                {
+                    "container": "Oligo_tips_2"
+                }, 
+                {
+                    "container": "Oligo_tips_3"
+                }, 
+                {
+                    "container": "Oligo_tips_4"
+                }
+            ], 
+            "tool": "pipette", 
+            "trash-container": {
+                "container": "trash"
+            }, 
+            "multi-channel": true, 
+            "axis": "a", 
+            "volume": 200, 
+            "down-plunger-speed": 300, 
+            "up-plunger-speed": 500, 
+            "tip-plunge": 6, 
+            "extra-pull-volume": 0, 
+            "extra-pull-delay": 0, 
+            "distribute-percentage": 0.1, 
+            "points": [
+                {
+                    "f1": 1, 
+                    "f2": 1
+                }, 
+                {
+                    "f1": 5, 
+                    "f2": 5
+                }, 
+                {
+                    "f1": 7, 
+                    "f2": 7
+                }, 
+                {
+                    "f1": 10, 
+                    "f2": 10
+                }
+            ]
+        }
+    }, 
+    "ingredients": {}, 
+    "instructions": [
+        {
+            "tool": "p200", 
+            "groups": [
+                {
+                    "mix": [
+                        {
+                            "container": "Beads_home", 
+                            "location": "A1", 
+                            "volume": 200, 
+                            "repititions": 5, 
+                            "blowout": true, 
+                            "liquid-tracking": true
+                        }
+                    ]
+                }, 
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Beads_home", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A1", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A2", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A3", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A4", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A5", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A6", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }
+                        ], 
+                        "blowout": true
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Beads_home", 
+                            "location": "A7"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A7", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A8", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A9", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A10", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A11", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_1", 
+                                "location": "A12", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }
+                        ], 
+                        "blowout": true
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Beads_home", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A1", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A2", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A3", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A4", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A5", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A6", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }
+                        ], 
+                        "blowout": true
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Beads_home", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A7", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A8", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A9", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A10", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A11", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_2", 
+                                "location": "A12", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }
+                        ], 
+                        "blowout": true
+                    }
+                }, 
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Beads_home", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A1", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A2", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A3", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A4", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A5", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A6", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }
+                        ], 
+                        "blowout": true
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Beads_home", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A7", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A8", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A9", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A10", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A11", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_3", 
+                                "location": "A12", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }
+                        ], 
+                        "blowout": true
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Beads_home", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A1", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A2", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A3", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A4", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A5", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A6", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }
+                        ], 
+                        "blowout": true
+                    }
+                },
+                {
+                    "distribute": {
+                        "from": {
+                            "container": "Beads_home", 
+                            "location": "A1"
+                        }, 
+                        "to": [
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A7", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A8", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }, 
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A9", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A10", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A11", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            },
+                            {
+                                "container": "Reaction_4", 
+                                "location": "A12", 
+                                "volume": 30, 
+                                "touch-tip": true
+                            }
+                        ], 
+                        "blowout": true
+                    }
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A1", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A1", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A2", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A2", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A3", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A3", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A4", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A4", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A5", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A5", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A6", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A6", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A7", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A7", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A8", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A8", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A9", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A9", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A10", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A10", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A11", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A11", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_1", 
+                                "location": "A12", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_1", 
+                                "location": "A12", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A1", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A1", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A2", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A2", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A3", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A3", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A4", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A4", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A5", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A5", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A6", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A6", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A7", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A7", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A8", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A8", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A9", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A9", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A10", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A10", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A11", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A11", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_2", 
+                                "location": "A12", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_2", 
+                                "location": "A12", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A1", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A1", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A2", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A2", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A3", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A3", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A4", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A4", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A5", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A5", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A6", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A6", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A7", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A7", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A8", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A8", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A9", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A9", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A10", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A10", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A11", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A11", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_3", 
+                                "location": "A12", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_3", 
+                                "location": "A12", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A1", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A1", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A2", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A2", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A3", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A3", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A4", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A4", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A5", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A5", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A6", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A6", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A7", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A7", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A8", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A8", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A9", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A9", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A10", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A10", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A11", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A11", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                },
+                {
+                    "transfer": [
+                        {
+                            "from": {
+                                "container": "Barcode_4", 
+                                "location": "A12", 
+                                "touch-tip": true
+                            }, 
+                            "to": {
+                                "container": "Reaction_4", 
+                                "location": "A12", 
+                                "touch-tip": true
+                            }, 
+                            "volume": 13.5, 
+                            "blowout": true, 
+                            "extra-pull": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
