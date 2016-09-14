@@ -3,13 +3,6 @@ from opentrons_sdk.protocol import Protocol
 
 protocol = Protocol()
 
-protocol.set_info(
-    name="Dilution 10x",
-    description="10X Full Plate",
-    author="Opentrons",
-    created="Wed Aug 24 10:10:00 2016"
-}
-
 p200_rack = containers.tiprack.p200('B1')
 trash = containers.trough_12row('B2')
 
@@ -27,11 +20,13 @@ p200 = labware.Pipette(
 
 # spread the stuff to all of column A
 for r in range(1,13):
+
+	# it's an entire row of wells, because it's multi-channel
 	s_wells = trough.row(1)
 	d_wells = standards.row(r)
 
-	p200.take(s_well, volume=180, z=1)
-	p200.to(d_well).blowout().touch_tip()
+	p200.take(s_wells, volume=180, z=1.1) # z= is a percentage, in this case %110 of this well's height
+	p200.to(d_wells).blowout().touch_tip()
 
 # dilute through the column
 for r in range(1,12):
@@ -42,8 +37,8 @@ for r in range(1,12):
 	p200.replace_tip()
 
 	# mix the well
-	p200.take(s_wells, volume=100, z=0.1)
-	p200.mix(3, z=0.1).blowout(z=1.1)
+	p200.take(s_wells, volume=100, z=0.1) # z= is a percentage, in this case %10 of this well's height
+	p200.mix(3, z=0.1).blowout(z=1.1).delay(3)
 
 	# then transfer to next well
 	p200.take(s_wells, volume=20, z=0.1)
@@ -51,5 +46,5 @@ for r in range(1,12):
 
 p200.replace_tip()
 
-p200.take(standards.row(12), volume=100, z=1)
-p200.mix(3, z=1).blowout()
+p200.take(standards.row(12), volume=100, z=0.1)
+p200.mix(3, z=0.1).blowout().delay(3)
