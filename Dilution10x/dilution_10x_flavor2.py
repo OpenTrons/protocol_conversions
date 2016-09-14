@@ -43,7 +43,7 @@ for r in range(1,12):
 
 	# mix the well
 	p200.take(s_wells, volume=100, z=1)
-	p200.mix(3, {'tip-offset': 1}).blowout()
+	p200.mix(3, z=1).blowout()
 
 	# then transfer to next well
 	p200.take(s_wells, volume=20, z=1)
