@@ -42,12 +42,12 @@ for r in range(1,12):
 	p200.replace_tip()
 
 	# mix the well
-	p200.take(s_wells, volume=100, z=1)
-	p200.mix(3, z=1).blowout()
+	p200.take(s_wells, volume=100, z=0.1)
+	p200.mix(3, z=0.1).blowout(z=1.1)
 
 	# then transfer to next well
-	p200.take(s_wells, volume=20, z=1)
-	p200.to(d_wells, z=1).touch_tip()
+	p200.take(s_wells, volume=20, z=0.1)
+	p200.to(d_wells).touch_tip()
 
 p200.replace_tip()
 
